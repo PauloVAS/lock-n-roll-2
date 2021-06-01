@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Category } from '../../../models/category.model';
+import {AlertController} from "@ionic/angular";
 
 @Component({
   selector: 'app-categories-listing-page',
@@ -12,8 +13,11 @@ export class CategoriesListingPageComponent implements OnInit {
   categories: Category[] = [];
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertCtrl:AlertController
   ) { }
+
+  
 
   ngOnInit() {
     this.route.data.subscribe(data => {
@@ -25,6 +29,40 @@ export class CategoriesListingPageComponent implements OnInit {
       // tslint:disable-next-line:no-string-literal
       this.listingTopic = (params['topic'] && params['topic'] !== '') ? params['topic'] : this.listingTopic;
     });
+  }
+
+ Sobre() {
+    this.alertCtrl.create({
+      header:"Sobre",
+      message:"Aplicativo Lock ´n Roll - Versão 1.0 | Contato: locknroll@gmail.com | Localização: Everywhere",
+      buttons: [
+        {
+          text:"Ok",
+         
+        }
+      ]
+
+    }).then((promptElement)=>{
+        promptElement.present();
+    }
+    )
+  }
+
+  ListaFunc() {
+    this.alertCtrl.create({
+      header:"Lista de Funcionalidades",
+      message:"Gerenciamento de Conteúdo - Controle de Foco",
+      buttons: [
+        {
+          text:"Ok",
+         
+        }
+      ]
+
+    }).then((promptElement)=>{
+        promptElement.present();
+    }
+    )
   }
 
 }

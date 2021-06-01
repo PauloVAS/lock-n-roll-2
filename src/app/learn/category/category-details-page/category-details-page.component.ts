@@ -52,7 +52,7 @@ export class CategoryDetailsPageComponent implements OnInit {
   async deleteQuestion(question: Question) {
     const alert = await this.alertController.create({
       header: 'Confirm',
-      message: 'Are you sure you want to delete this Question?',
+      message: 'Tem certeza que deseja apagar tarefa?',
       buttons: [
        {
          text: 'Cancel',

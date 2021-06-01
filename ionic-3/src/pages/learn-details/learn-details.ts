@@ -56,8 +56,8 @@ export class LearnDetailsPage {
 
   delete(questionId){
     let confirm = this.alertCtrl.create({
-      title: 'Delete question',
-      message: 'Are you sure you want to delete this question?',
+      title: 'Apagar Tarefa',
+      message: 'Tem certeza que deseja apagar tarefa?',
       buttons: [
         {
           text: 'No',
@@ -109,5 +109,7 @@ export class LearnDetailsPage {
       id: question.id
     });
   }
+
+  
 
 }

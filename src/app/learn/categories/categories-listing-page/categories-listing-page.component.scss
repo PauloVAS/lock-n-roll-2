@@ -1,18 +1,15 @@
 .categories-listing-main-header {
-  // Override Ionic properties
-  @at-root ion-header#{&}.header-collapse-condense-inactive {
-    // To fix blink when page loads
-    ion-title {
-      visibility: hidden;
-    }
-  }
+  
+  text-align: center;
+  font-size: large;
+  align-items: center;
 }
 
 .categories-listing-main-toolbar {
   // Override Ionic properties
   @at-root ion-toolbar#{&} {
     --background: transparent;
-    --color: var(--ion-color-dark);
+   // --color: var(--ion-color-dark);
   }
 }
 
@@ -22,14 +19,15 @@ ion-content {
   border-top: var(--app-header-height);
   border-top-style: solid;
   // Same as default ion-content background
-  border-top-color: #FFF;
+  border-top-color: #0070BA;
 }
 
 .categories-call-out {
   margin: 15px 20px 30px;
-  color: rgba(51, 51, 51, 0.8);
+  color: #0070BA;
   text-align: center;
   line-height: 1.4;
+  
 
   ion-badge {
     vertical-align: sub;
@@ -39,7 +37,7 @@ ion-content {
 }
 
 .category-card {
-  --color: #FFF;
+  --color: rgb(49, 190, 131);
 
   ion-card-title,
   ion-card-subtitle {

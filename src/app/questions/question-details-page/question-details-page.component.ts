@@ -59,7 +59,7 @@ export class QuestionDetailsPageComponent implements OnInit {
   async deleteAnswer(answer: Answer) {
    const alert = await this.alertController.create({
      header: 'Confirm',
-     message: 'Are you sure you want to delete this answer?',
+     message: 'Tem certeza que deseja apagar tarefa?',
      buttons: [
        {
          text: 'Cancel',

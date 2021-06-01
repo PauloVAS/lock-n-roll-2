@@ -85,7 +85,7 @@ export class QuestionDetailsPage {
   delete(answerId){
     let confirm = this.alertCtrl.create({
       title: 'Delete answer',
-      message: 'Are you sure you want to delete this answer?',
+      message: 'Tem certeza que deseja apagar tarefa?',
       buttons: [
         {
           text: 'No',

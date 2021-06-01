@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="learn" color="light"></ion-back-button>
     </ion-buttons>
-    <ion-title>Learn {{ category.title | titlecase }}</ion-title>
+    <ion-title>CONTROLE DE FOCO</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -21,34 +21,30 @@
     </div>
 
     <p class="questions-call-out" *ngIf="questions.length > 0">
-      <span>Find all the <b>Questions</b> and <b>Answers</b> about</span>
+      <span></span>
       <ion-badge style="--background:{{category.color}}">{{ category.title }}</ion-badge>
-      <span>from the community</span>
+      <span></span>
     </p>
 
-    <p class="questions-call-out" *ngIf="questions.length == 0">
-      <span>There are no questions on</span>
-      <ion-badge style="--background:{{category.color}}">{{ category.title }}</ion-badge>
-      <span>yet. Be the first to ask!</span>
-    </p>
+    
 
     <ion-row class="category-question-item-row" *ngFor="let question of questions">
       <ion-col size="3" class="question-reputation-col">
-        <div class="question-score question-attribute">
+        <!--<div class="question-score question-attribute">
           <span class="question-score-title question-attribute-title">Votes</span>
           <span class="question-score-value question-attribute-value" [ngClass]="{'good-score': (question.positiveVotes - question.negativeVotes) > 0, 'bad-score': (question.positiveVotes - question.negativeVotes) < 0}">
-            {{ question.positiveVotes + question.negativeVotes }}
+            
           </span>
-        </div>
-        <div class="question-answers question-attribute">
+        </div>-->
+        <!--<div class="question-answers question-attribute">
           <span class="question-answers-title question-attribute-title">Answers</span>
           <span class="question-answers-value question-attribute-value" [ngClass]="{'has-answers': (question.answersCount) > 0}">
-            {{ question.answersCount }}
+            
           </span>
-        </div>
+        </div>-->
         <div class="question-actions">
           <ion-button shape="round" expand="block" fill="clear" size="small" color="danger" (click)="deleteQuestion(question)">
-            Delete
+            APAGAR
           </ion-button>
         </div>
       </ion-col>
@@ -75,7 +71,7 @@
 
   <div slot="fixed" class="category-fixed-content">
     <ion-button class="ask-question-btn" expand="block" color="tertiary" (click)="createQuestion()">
-      Have a Question? Ask!
+      CRIAR TAREFA 
     </ion-button>
   </div>
 </ion-content>
